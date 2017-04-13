@@ -1,0 +1,37 @@
+CREATE DATABASE studentrecordkeeper;
+
+CREATE TABLE courses
+(
+  coursesubject text,
+  coursenumber text,
+  coursesection text,
+  coursename text,
+  credits double precision,
+  yearlevel integer,
+  yearsection text,  
+  yearused integer,
+  type text,  
+  PRIMARY KEY (coursesubject,coursenumber)
+);
+
+CREATE TABLE student
+(
+  name text,
+  studentnumber text PRIMARY KEY,
+  previouschool text,
+  previousprogram text,
+  yearlevel integer,
+  yearsection text,  
+  year integer
+);
+
+CREATE TABLE grades
+(
+	studentnumber text REFERENCES student(studentnumber) ON DELETE CASCADE,
+	coursesubject text,
+	coursenumber text,
+	grade integer,
+	yeartaken integer,
+	FOREIGN KEY(coursesubject, coursenumber) REFERENCES courses(coursesubject, coursenumber) ON DELETE RESTRICT,
+	PRIMARY KEY(studentnumber,coursenumber,coursesubject,yeartaken)
+);

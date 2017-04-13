@@ -1,0 +1,157 @@
+SOCI~2755~comp~Technology, Society and Indigenous Peoples in Canada~0.5~2011~compa
+ENGI~4539~comp~Professional Practice and Law~0.5~2011~compa
+ANTH~1034~comp~World Cultures~0.5~2011~compa
+ANTH~2151~comp~Ancient Peoples and Places~0.5~2011~compa
+ANTH~2332~comp~Peoples and Cultures of Africa~0.5~2011~compa
+ANTH~2550~comp~Traditional Aboriginal Cultures~0.5~2011~compa
+CRIM~1010~comp~Introduction to Criminology~0.5~2011~compa
+CRIM~4070~comp~Trafficking~0.5~2011~compa
+ENGL~1115~comp~Foundations of Literary Study~0.5~2011~compa
+ENGL~1116~comp~Native and Newcomer Literatures in Canada~0.5~2011~compa
+ENGL~1117~comp~Introduction to Popular Culture~0.5~2011~compa
+ENGL~1118~comp~Introduction to Film Studies~0.5~2011~compa
+ENGL~2115~comp~Shakespeare~0.5~2011~compa
+ENGL~2510~comp~Global Literatures in English~0.5~2011~compa
+ENGL~2717~comp~Indigenous Literature in Canada~0.5~2011~compa
+ENGL~2810~comp~Gender, Sexuality and the Body in Literature and Culture~0.5~2011~compa
+ENGL~2817~comp~Writing Across Genres: Nonfiction Prose~0.5~2011~compa
+ENGL~2818~comp~Writing Across Genres: Creative Writing~0.5~2011~compa
+ENGL~2916~comp~Popular Fiction~0.5~2011~compa
+ENGL~2917~comp~Children's Literature~0.5~2011~compa
+ENGL~2950~comp~Science Fiction~0.5~2011~compa
+GEOG~1150~comp~The Environment~0.5~2011~compa
+GEOG~2511~comp~Economic Geography~0.5~2011~compa
+GEOG~2811~comp~Cultural Geography~0.5~2011~compa
+GEOG~3411~comp~Resource Management~0.5~2011~compa
+GEOG~3631~comp~Geography of Canada~0.5~2011~compa
+GEOG~3633~comp~Geography of the Lake Superior Basin~0.5~2011~compa
+GEOG~3693~comp~Geography of Northern Europe~0.5~2011~compa
+GEOG~3731~comp~Urban Residential Structure~0.5~2011~compa
+GEOG~3751~comp~Retail Locations~0.5~2011~compa
+HIST~1100~comp~The Making of the Modern World ~1.0~2011~compa
+HIST~2010~comp~Environmental History: A Global View~0.5~2011~compa
+HIST~2115~comp~Germany, 19th Century ~0.5~2011~compa
+HIST~2116~comp~Germany, 20th Century ~0.5~2011~compa
+HIST~2130~comp~Modern Europe II, 1914-1990 ~0.5~2011~compa
+HIST~2139~comp~Republican France, 1870-1983 ~0.5~2011~compa
+HIST~2171~comp~Finland and the Nordic Region in the 19th Century~0.5~2011~compa
+HIST~2172~comp~Finland and the Nordic Region in the 20th Century~0.5~2011~compa
+HIST~2201~comp~Greek~0.5~2011~compa
+HIST~2203~comp~Roman~0.5~2011~compa
+HIST~2350~comp~Modern Canada~0.5~2011~compa
+HIST~2138~comp~Revolutionary France, 1789-1870 ~0.5~2011~compa
+HIST~2510~comp~The Americas to 1870~0.5~2011~compa
+HIST~2515~comp~Modern Latin America and the Caribbean~0.5~2011~compa
+HIST~2511~comp~The United States after the Civil War~0.5~2011~compa
+HIST~2619~comp~Modern South Asia~0.5~2011~compa
+INDI~1312~comp~Native Imagery~0.5~2011~compa
+INDI~1314~comp~Native People and the Issues~0.5~2011~compa
+INDI~2312~comp~Native Peoples and the North~0.5~2011~compa
+INDI~2313~comp~Native Peoples and the Urban Community~0.5~2011~compa
+INDI~2433~comp~Native People and the Government~0.5~2011~compa
+INDI~2805~comp~Native Canadian World Views ~1.0~2011~compa
+INDI~2811~comp~Corporations and the Status Indian~0.5~2011~compa
+INDI~3501~comp~Native Narratives, Myths, Legends, and Ceremonies ~1.0~2011~compa
+INDI~3435~comp~Native People and the Land~0.5~2011~compa
+INDI~3811~comp~The Rights of Aboriginal People in s.35~0.5~2011~compa
+INDI~3812~comp~Taxation and the Status Indian~0.5~2011~compa
+FINN~2401~comp~Finnish Civilization ~1.0~2011~compa
+FREN~2416~comp~France: Culture and Civilization~0.5~2011~compa
+FREN~2417~comp~La Francophonie: Culture and Civilization~0.5~2011~compa
+FREN~2611~comp~Introduction to French-Canadian Civilization~0.5~2011~compa
+FREN~2615~comp~Introduction to French-Canadian Civilization~0.5~2011~compa
+ITAL~2510~comp~Language and Culture~0.5~2011~compa
+ITAL~2530~comp~Italian Civilization~0.5~2011~compa
+LING~0300~comp~Introduction to Language ~1.0~2011~compa
+LING~0510~comp~An Introduction to Etymology~0.5~2011~compa
+MUSI~1300~comp~Introduction to Music ~1.0~2011~compa
+MUSI~1312~comp~Music History I~0.5~2011~compa
+MUSI~1313~comp~Music History II~0.5~2011~compa
+MUSI~1340~comp~Theory of Music I~0.5~2011~compa
+MUSI~2314~comp~Music History III~0.5~2011~compa
+MUSI~2315~comp~Music History IV~0.5~2011~compa
+MUSI~2341~comp~Theory of Music II~0.5~2011~compa
+MUSI~3313~comp~Topics in Music I~0.5~2011~compa
+MUSI~3317~comp~Music in Canada~0.5~2011~compa
+MUSI~3356~comp~Guitar Literature~0.5~2011~compa
+MUSI~4315~comp~Topics in Music II~0.5~2011~compa
+PHIL~1110~comp~Introduction to Philosophy: Origins~0.5~2011~compa
+PHIL~1111~comp~Introduction to Philosophy: Modern Development~0.5~2011~compa
+PHIL~1118~comp~Philosophy of the Occult and Paranormal~0.5~2011~compa
+PHIL~1571~comp~Contemporary Moral Issues~0.5~2011~compa
+PHIL~2013~comp~Environmental Philosophy~0.5~2011~compa
+PHIL~2614~comp~Early Modern Philosophy I~0.5~2011~compa
+PHIL~2913~comp~Philosophy & Science Fiction~0.5~2011~compa
+PHIL~3514~comp~Cyberethics~0.5~2011~compa
+POLI~1100~comp~Introduction to Political Studies ~1.0~2011~compa
+POLI~2311~comp~Criminal Law~0.5~2011~compa
+POLI~2313~comp~Human Rights and Civil Liberties~0.5~2011~compa
+POLI~2315~comp~Law and Politics of the Family~0.5~2011~compa
+POLI~2410~comp~Mass Media and Politics~0.5~2011~compa
+POLI~2510~comp~Ancient & Medieval Political Thought~0.5~2011~compa
+POLI~2611~comp~World Politics~0.5~2011~compa
+POLI~3314~comp~Global Terrorism~0.5~2011~compa
+POLI~3351~comp~Aboriginal Peoples and the Law~0.5~2011~compa
+PSYC~1100~comp~Introductory Psychology ~1.0~2011~compa
+PSYC~2011~comp~Child Development~0.5~2011~compa
+PSYC~2211~comp~Introduction to Health Psychology~0.5~2011~compa
+PSYC~2301~comp~Personality Psychology~0.5~2011~compa
+PSYC~2801~comp~Social Psychology~0.5~2011~compa
+PSYC~3210~comp~Cultural Psychology~0.5~2011~compa
+SOCI~1100~comp~Introduction to Sociology ~1.0~2011~compa
+SOCI~2111~comp~Perspectives in Social Thought~0.5~2011~compa
+SOCI~2112~comp~Friendship@facebook.Com~0.5~2011~compa
+SOCI~2221~comp~Crime and Society ~1.0~2011~compa
+SOCI~2501~comp~Family Sociology ~1.0~2011~compa
+SOCI~2817~comp~Sociology of the North~0.5~2011~compa
+SOCI~2911~comp~Social Research Traditions~0.5~2011~compa
+SOCI~3107~comp~Sociology of Women~0.5~2011~compa
+SOCI~3113~comp~Special Topics in Sociology~0.5~2011~compa
+SOCI~3213~comp~Urban Life and Culture~0.5~2011~compa
+SOCI~3513~comp~Sociology of Aging~0.5~2011~compa
+SOCI~3515~comp~Life Course Studies~0.5~2011~compa
+SOCI~3613~comp~Canadian Population~0.5~2011~compa
+SOCI~4551~comp~Food and Culture~0.5~2011~compa
+VISU~0510~comp~Fundamentals of Art I~0.5~2011~compa
+VISU~1090~comp~Prehistory to the Middle Ages~0.5~2011~compa
+VISU~1091~comp~Renaissance to the Contemporary Period~0.5~2011~compa
+VISU~2211~comp~Critical Studies in Early Twentieth Century Art~0.5~2011~compa
+VISU~2212~comp~Critical Studies in Late Twentieth Century Art~0.5~2011~compa
+WOME~1100~comp~Madonna to Madonna: Women's & Gender Studies ~1.0~2011~compa
+WOME~2113~comp~Women, Popular Culture and Counter Culture ~0.5~2011~compa
+WOME~2114~comp~Ecofeminism~0.5~2011~compa
+WOME~2116~comp~Gender in Cross-Cultural Perspective~0.5~2011~compa
+WOME~2711~comp~Women's Action for Social Change~0.5~2011~compa
+BUSI~1511~comp~Basics of Management ~0.5~2011~compb
+BUSI~1011~comp~Introduction to Management~0.5~2011~compb
+BUSI~2514~comp~Entrepreneurial Marketing~0.5~2011~compb
+BUSI~2538~comp~Entrepreneurial Human Resources~0.5~2011~compb
+ECON~1100~comp~Principles of Economics ~1.0~2011~compb
+ECON~2017~comp~Microeconomics I~0.5~2011~compb
+ECON~2212~comp~Environmental Economics~0.5~2011~compb
+ECON~2231~comp~Health Economics~0.5~2011~compb
+ECON~2511~comp~Locational Economics~0.5~2011~compb
+ECON~3111~comp~Labour Economics~0.5~2011~compb
+ECON~3114~comp~International Finance~0.5~2011~compb
+ECON~3133~comp~Regional Economics~0.5~2011~compb
+ECON~3211~comp~Economic Development~0.5~2011~compb
+ECON~3214~comp~History of Economic Thought~0.5~2011~compb
+ECON~3215~comp~Money and Banking~0.5~2011~compb
+ECON~3313~comp~Public Finance~0.5~2011~compb
+ECON~3412~comp~Industrial Organization~0.5~2011~compb
+FINN~1000~comp~Elementary Finnish ~1.0~2011~compb
+FINN~2001~comp~Intermediate Finnish~0.5~2011~compb
+FREN~0500~comp~French for Beginners ~1.0~2011~compb
+FREN~1000~comp~Elementary French~0.5~2011~compb
+FREN~1200~comp~Intermediate French~0.5~2011~compb
+FREN~1204~comp~Francais Intermediaire ~1.0~2011~compb
+GERM~1000~comp~Elementary German ~1.0~2011~compb
+ITAL~1000~comp~Introductory Italian ~1.0~2011~compb
+ITAL~1510~comp~Language and Culture~0.5~2011~compb
+LANG~0500~comp~Mandarin for Beginners~0.5~2011~compb
+OJIB~1013~comp~Introduction to Severn Ojibwe I~0.5~2011~compb
+OJIB~1014~comp~Introduction to Western Ojibwe I~0.5~2011~compb
+OJIB~1015~comp~Introduction to Severn Ojibwe II~0.5~2011~compb
+OJIB~1016~comp~Introduction to Western Ojibwe II~0.5~2011~compb
+SPAN~1000~comp~Introductory Spanish ~1.0~2011~compb
+SPAN~2001~comp~Intermediate Spanish~0.5~2011~compb

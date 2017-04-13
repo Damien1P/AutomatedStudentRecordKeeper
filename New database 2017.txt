@@ -1,0 +1,41 @@
+CREATE DATABASE studentrecordkeeper;
+
+CREATE TABLE complementarycourses
+(
+  coursesubject text,
+  coursenumber text,
+  coursename text,
+  credits double precision,
+  firstusedyear integer,
+  lastusedyear integer
+);
+CREATE TABLE courses
+(
+  coursesubject text,
+  coursenumber text,
+  coursesection text,
+  coursename text,
+  credits double precision,
+  yearlevel integer,
+  yearsection text,  
+  firstusedyear integer,
+  lastusedyear integer
+);
+CREATE TABLE makeupcourses
+(
+  studentid text,
+  coursesubject text,
+  coursenumber text,
+  coursename text,
+  credits double precision
+);
+CREATE TABLE student
+(
+  name text,
+  studentid text,
+  previouschool text,
+  previousprogram text,
+  yearlevel integer,
+  yearsection text,  
+  year integer
+);

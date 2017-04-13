@@ -1,0 +1,40 @@
+ENGI~1236~Electric Circuit Theory I~Fall~0.5~1~2011/2012~2011~curric
+COMP~1411~Computer Programming I~Fall~0.5~1~2011/2012~2011~curric
+MATH~1210~Calculus I~Fall~0.5~1~2011/2012~2011~curric
+MATH~1071~Vectors and Matrices~Fall~0.5~1~2011/2012~2011~curric
+ENGI~1637~Computer Logic Circuits~Fall~0.5~1~2011/2012~2011~curric
+PHYS~1070~Semiconductor Physics~Fall~0.5~1~2011/2012~2011~curric
+COMP~1431~Computer Programming II~Winter~0.5~1~2011/2012~2011~curric
+MATH~1230~Calculus II~Winter~0.5~1~2011/2012~2011~curric
+ENGI~1232~Introduction to Microcontrollers ~Winter~0.5~1~2011/2012~2011~curric
+ENGI~3014~Engineering Chemistry~Winter~0.5~1~2011/2012~2011~curric
+ENGI~1634~Electronics I~Winter~0.5~1~2011/2012~2011~curric
+BUSI~1511~Basics of Management~Winter~0.5~1~2011/2012~2011~curric
+ENGL~1015~Introduction to Academic Writing~Fall~0.5~2~2011/2012~2011~curric
+COMP~2412~Data Structures~Fall~0.5~2~2011/2012~2011~curric
+ENGI~3670~Software Engineering~Fall~0.5~2~2011/2012~2011~curric
+ENGI~2254~Data Management and Information Systems~Fall~0.5~2~2011/2012~2011~curric
+MATH~2050~Applied Analysis I~Fall~0.5~2~2011/2012~2011~curric
+ENGI~2453~Computer Communications and Networking~Winter~0.5~2~2011/2012~2011~curric
+ENGI~2571~Computer Hardware and Software Systems~Winter~0.5~2~2011/2012~2011~curric
+ENGI~2570~Object Oriented Graphical User Interface~Winter~0.5~2~2011/2012~2011~curric
+ENGI~1552~Principles of Engineering Mechanics~Winter~0.5~2~2011/2012~2011~curric
+MATH~2070~Applied Analysis II~Winter~0.5~2~2011/2012~2011~curric
+ENGI~2918~Technical Project~Winter~0.5~2~2011/2012~2011~curric
+ENGI~3655~Principles of Operating Systems~Fall~0.5~3~2011/2012~2011~curric
+ENGI~3050~Software Engineering Design ~Fall~0.5~3~2011/2012~2011~curric
+MATH~4030~Probability and Statistics~Fall~0.5~3~2011/2012~2011~curric
+MATH~3071~Discrete Mathematics for Engineers~Fall~0.5~3~2011/2012~2011~curric
+ENGI~3255~Software Testing & Quality Assurance~Winter~0.5~3~2011/2012~2011~curric
+ENGI~3558~Numerical Methods and Modeling~Winter~0.5~3~2011/2012~2011~curric
+ENGI~3350~Performance Analysis of Software~Winter~0.5~3~2011/2012~2011~curric
+ENGI~3336~Economics Analysis for Engineers~Winter~0.5~3~2011/2012~2011~curric
+ENGI~4969~Degree Project~Fall~0.5~4~2011/2012~2011~curric
+ENGI~4559~Digital Signal and Image Processing ~Fall~0.5~4~2011/2012~2011~curric
+ENGI~4557~Data and Digital Communications~Fall~0.5~4~2011/2012~2011~curric
+ENGI~4251~Compiler and Algorithm Design~Fall~0.5~4~2011/2012~2011~curric
+ENGI~4250~Software Safety and Security~Fall~0.5~4~2011/2012~2011~curric
+ENGI~4969~Degree Project~Winter~0.5~4~2011/2012~2011~curric
+ENGI~4539~Professional Practice and Law~Winter~0.5~4~2011/2012~2011~curric
+ENGI~3675~Database Systems~Winter~0.5~4~2011/2012~2011~curric
+ENGI~3312~Embedded Systems~Winter~0.5~4~2011/2012~2011~curric
