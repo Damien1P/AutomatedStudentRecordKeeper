@@ -93,7 +93,7 @@ namespace AutomatedStudentRecordKeeper
                             cmd.Cancel();
                             reader.Close();
 
-                            cmd = new NpgsqlCommand("insert into courses values(:sub, :num, NULL,:name,:cred,NULL,NULL,:year,'makeup')", conn);
+                            cmd = new NpgsqlCommand("insert into courses values(:sub, :num, 'makeup',:name,:cred,NULL,NULL,:year,'makeup')", conn);
                             cmd.Parameters.Add(new NpgsqlParameter("sub", CourseTable.GetControlFromPosition(0, j).Text));
                             cmd.Parameters.Add(new NpgsqlParameter("num", CourseTable.GetControlFromPosition(1, j).Text));
                             cmd.Parameters.Add(new NpgsqlParameter("name", CourseTable.GetControlFromPosition(2, j).Text));

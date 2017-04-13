@@ -61,3 +61,7 @@ C:\Users\Shawn\Desktop\Automated-Student-Record-Keeper\Merged with Brandons Code
 C:\Users\Shawn\Desktop\Automated-Student-Record-Keeper\Merged with Brandons Code\Automated-Student-Record-Keeper\Gui\AutomatedStudentRecordKeeper\AutomatedStudentRecordKeeper\bin\Debug\AutomatedStudentRecordKeeper.pdb
 C:\Users\Shawn\Desktop\Automated-Student-Record-Keeper\Merged with Brandons Code\Automated-Student-Record-Keeper\Gui\AutomatedStudentRecordKeeper\AutomatedStudentRecordKeeper\bin\Debug\Npgsql.dll
 C:\Users\Shawn\Desktop\Automated-Student-Record-Keeper\Merged with Brandons Code\Automated-Student-Record-Keeper\Gui\AutomatedStudentRecordKeeper\AutomatedStudentRecordKeeper\bin\Debug\Npgsql.xml
+C:\Users\bjcri\OneDrive\Documents\GitHub\AutomatedStudentRecordKeeper\Gui\AutomatedStudentRecordKeeper\AutomatedStudentRecordKeeper\bin\Debug\AutomatedStudentRecordKeeper.exe.config
+C:\Users\bjcri\OneDrive\Documents\GitHub\AutomatedStudentRecordKeeper\Gui\AutomatedStudentRecordKeeper\AutomatedStudentRecordKeeper\obj\Debug\AutomatedStudentRecordKeeper.csproj.ResolveComReference.cache
+C:\Users\bjcri\OneDrive\Documents\GitHub\AutomatedStudentRecordKeeper\Gui\AutomatedStudentRecordKeeper\AutomatedStudentRecordKeeper\obj\Debug\AutomatedStudentRecordKeeper.exe
+C:\Users\bjcri\OneDrive\Documents\GitHub\AutomatedStudentRecordKeeper\Gui\AutomatedStudentRecordKeeper\AutomatedStudentRecordKeeper\obj\Debug\AutomatedStudentRecordKeeper.pdb
