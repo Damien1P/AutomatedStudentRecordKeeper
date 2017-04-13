@@ -1,5 +1,7 @@
+--DROP DATABASE studentrecordkeeper;
 CREATE DATABASE studentrecordkeeper;
 
+--DROP TABLE courses;
 CREATE TABLE courses
 (
   coursesubject text,
@@ -10,10 +12,11 @@ CREATE TABLE courses
   yearlevel integer,
   yearsection text,  
   yearused integer,
-  type text,  
-  PRIMARY KEY (coursesubject,coursenumber)
+  "type" text,  
+  PRIMARY KEY(coursesubject,coursenumber, coursesection, yearused, "type")
 );
 
+--DROP TABLE student;
 CREATE TABLE student
 (
   name text,
@@ -25,13 +28,14 @@ CREATE TABLE student
   year integer
 );
 
+DROP TABLE grades;
 CREATE TABLE grades
 (
 	studentnumber text REFERENCES student(studentnumber) ON DELETE CASCADE,
 	coursesubject text,
 	coursenumber text,
+	coursesection text,
 	grade integer,
 	yeartaken integer,
-	FOREIGN KEY(coursesubject, coursenumber) REFERENCES courses(coursesubject, coursenumber) ON DELETE RESTRICT,
-	PRIMARY KEY(studentnumber,coursenumber,coursesubject,yeartaken)
+	PRIMARY KEY(studentnumber,coursenumber,coursesubject, coursesection,yeartaken)
 );
