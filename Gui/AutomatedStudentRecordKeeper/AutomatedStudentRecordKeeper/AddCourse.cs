@@ -176,6 +176,12 @@ namespace AutomatedStudentRecordKeeper
                         selectedInputFile = choofdlog.FileName; //sets path
 
                         Debug.Write("START");
+                        //initializes and shows wait screen
+                        waitScreen waitscrn = new waitScreen();
+                        waitscrn.Show();
+                        System.Windows.Forms.Application.DoEvents();
+
+                        //loads document file using microsoft word without showing microsoft word
                         List<string> data = new List<string>();
                         Microsoft.Office.Interop.Word.Application word = new Microsoft.Office.Interop.Word.Application();
                         Document document = word.Documents.Open(selectedInputFile, ReadOnly: true);
@@ -185,9 +191,11 @@ namespace AutomatedStudentRecordKeeper
 
                         string totaltext = string.Join(string.Empty, data.ToArray());
 
+                        //closes document and exits word
                         ((_Document)document).Close();
                         ((_Application)word).Quit();
 
+                        //cleaning of file
                         totaltext = totaltext.Substring(totaltext.IndexOf("YEAR")); //removes irrelevant info at beginning of doc file
                         totaltext = Regex.Replace(totaltext, @"\a", string.Empty);
                         totaltext = Regex.Replace(totaltext, @"(Lab)\r|(Lec)\r", string.Empty);
@@ -207,9 +215,12 @@ namespace AutomatedStudentRecordKeeper
                         string[] term = totaltext.Split(new string[] { "TERM " }, StringSplitOptions.RemoveEmptyEntries);
 
                         string coursesFile = System.IO.Path.Combine(System.Windows.Forms.Application.StartupPath, "courses.txt");
+
+                        //deletes file if exists and recreates it
                         System.IO.File.Delete(coursesFile);
                         using (System.IO.File.Create(coursesFile)) { }
 
+                        //sets permissions for created file
                         FileSecurity access = System.IO.File.GetAccessControl(coursesFile);
                         SecurityIdentifier everyone = new SecurityIdentifier(WellKnownSidType.WorldSid, null);
                         access.AddAccessRule(new FileSystemAccessRule(everyone, FileSystemRights.ReadAndExecute, AccessControlType.Allow));
@@ -258,6 +269,8 @@ namespace AutomatedStudentRecordKeeper
                             goto ERROR;
                         }
 
+                        waitscrn.Hide();
+                        this.Activate();
                         var result = MessageBox.Show("Importing of software engineering course load to the database was successful. Would you like to import another file?", "SUCCESS",
                              MessageBoxButtons.YesNo,
                              MessageBoxIcon.Question);
@@ -268,6 +281,8 @@ namespace AutomatedStudentRecordKeeper
                             this.Close();
                         goto END;
                     ERROR:
+                        waitscrn.Hide();
+                        this.Activate();
                         MessageBox.Show("Error Adding Courses to DataBase", "ERROR");
                         this.Close();
                     END:
