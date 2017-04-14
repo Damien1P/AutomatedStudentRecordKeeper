@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutomatedStudentRecordKeeper
 {
+    //class for formatting of grade table
     class viewgradetableinfo
     {
         private string subject;

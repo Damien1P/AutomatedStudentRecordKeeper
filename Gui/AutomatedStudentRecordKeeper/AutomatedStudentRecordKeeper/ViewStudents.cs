@@ -26,14 +26,17 @@ namespace AutomatedStudentRecordKeeper
 
                 NpgsqlCommand cmd;
                 NpgsqlDataReader reader;
+                // gets student infor from database
                 cmd = new NpgsqlCommand("select name, studentnumber from student ", conn);
                 reader = cmd.ExecuteReader();
+                //adds students to list
                 while (reader.Read())
                 {
                     students.Add(new studentinfo { StudentName = reader[0].ToString(), StudentNumber = reader[1].ToString() });
                 }
                 cmd.Cancel();
                 reader.Close();
+                //adds students to table
                 studenttable.DataSource = students;
                 conn.Close();
             }
@@ -51,6 +54,7 @@ namespace AutomatedStudentRecordKeeper
             conn.Open();
             if (conn.State == System.Data.ConnectionState.Open)
             {
+                //checks for valid student number
                 if (removetext.Text.Length != 7)
                 {
                     MessageBox.Show("Please enter valid student number");
@@ -58,6 +62,7 @@ namespace AutomatedStudentRecordKeeper
                 else
                 {
                     NpgsqlCommand cmd;
+                    //query to remove student from database
                     cmd = new NpgsqlCommand("delete from student where studentid = '" + removetext.Text + "'", conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Student removed if existed");
@@ -71,7 +76,7 @@ namespace AutomatedStudentRecordKeeper
             }
 
         }
-
+        //keypress to only allow numbers
         private void removetext_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;

@@ -18,7 +18,7 @@ namespace AutomatedStudentRecordKeeper
         {
             InitializeComponent();
         }
-
+        //key press only allowing numbers
         private void studentnumber_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
@@ -27,7 +27,7 @@ namespace AutomatedStudentRecordKeeper
                 e.Handled = true;
             }
         }
-
+        //keypress only allowing uppercase letters
         private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
@@ -44,11 +44,13 @@ namespace AutomatedStudentRecordKeeper
         private void submittable_Click(object sender, EventArgs e)
         {
             int count = 0;
+            //database connection string
             NpgsqlConnection conn = new NpgsqlConnection("Server=Localhost; Port=5432; Database=studentrecordkeeper; User Id=postgres; Password=;");
             //connect to database
             conn.Open();
             if (conn.State == System.Data.ConnectionState.Open)
             {
+                //checks if student exists in database
                 NpgsqlCommand cmd = new NpgsqlCommand("select exists (select true from student where studentnumber = '" + studentnumber.Text + "')", conn);
                 string checknum = "False";
                 NpgsqlDataReader reader = cmd.ExecuteReader();
@@ -58,7 +60,7 @@ namespace AutomatedStudentRecordKeeper
                 }
                 cmd.Cancel();
                 reader.Close();
-
+                //checks for valid data entry
                 if (studentnumber.Text.Length!=7)
                 {
                     MessageBox.Show("Please enter valid student number");
@@ -84,6 +86,7 @@ namespace AutomatedStudentRecordKeeper
                         else    
                         {
                             string studyear="";
+                            //selects year student entered school
                             cmd = new NpgsqlCommand("select year from student where studentnumber = '" + studentnumber.Text + "'", conn);
                             reader = cmd.ExecuteReader();
                             while (reader.Read())
@@ -92,7 +95,7 @@ namespace AutomatedStudentRecordKeeper
                             }
                             cmd.Cancel();
                             reader.Close();
-
+                            //query for entering makeup courses
                             cmd = new NpgsqlCommand("insert into courses values(:sub, :num, 'makeup',:name,:cred,NULL,NULL,:year,'makeup')", conn);
                             cmd.Parameters.Add(new NpgsqlParameter("sub", CourseTable.GetControlFromPosition(0, j).Text));
                             cmd.Parameters.Add(new NpgsqlParameter("num", CourseTable.GetControlFromPosition(1, j).Text));
@@ -109,11 +112,13 @@ namespace AutomatedStudentRecordKeeper
                             }
                             cmd.Cancel();
                             count++;
+                            //clear table after complete
                             CourseTable.GetControlFromPosition(0, j).Text = "";
                             CourseTable.GetControlFromPosition(1, j).Text = "";
                             CourseTable.GetControlFromPosition(2, j).Text = "";
                         }
                     }
+                    //message showing complete queries
                     MessageBox.Show(count.ToString()+" rows added, if row not cleared check formating");
                     CourseTable.Show();
                 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutomatedStudentRecordKeeper
 {
+    //class for student table formating
     class studentinfo
     {
         private string name;

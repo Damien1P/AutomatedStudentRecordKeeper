@@ -28,7 +28,7 @@ namespace AutomatedStudentRecordKeeper
         {
 
         }
-
+        //Add rows to makeuptable
         private void AddRowMakeup_Click(object sender, EventArgs e)
         {
             RowStyle temp = MakeupCourseTable.RowStyles[MakeupCourseTable.RowCount - 1];
@@ -41,7 +41,7 @@ namespace AutomatedStudentRecordKeeper
             MakeupCourseTable.GetControlFromPosition(1, MakeupCourseTable.RowCount - 1).KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.StudentNumberBox_KeyPress);
             MakeupCourseTable.Controls.Add(new RichTextBox() { Width = 233, Height = 21 }, 2, MakeupCourseTable.RowCount - 1);
         }
-
+        //Adds rows to course creddits table
         private void AddRowCredits_Click(object sender, EventArgs e)
         {
             RowStyle temp = CourseCredTable.RowStyles[CourseCredTable.RowCount - 1];
@@ -61,12 +61,13 @@ namespace AutomatedStudentRecordKeeper
 
         private void AddStudentButton_Click(object sender, EventArgs e)
         {
+            //database connection string
             NpgsqlConnection conn = new NpgsqlConnection("Server=Localhost; Port=5432; Database=studentrecordkeeper; User Id=postgres; Password=;");
             //connect to database
             conn.Open();
             if (conn.State == System.Data.ConnectionState.Open)
             {
-
+                //checks for valid entry data
                 if (StudentNumberBox.Text.Length != 7)
                 {
                     MessageBox.Show("Please input valid student number");
@@ -81,6 +82,7 @@ namespace AutomatedStudentRecordKeeper
                 }
                 else
                 {
+                    //check if student already exists
                     NpgsqlCommand cmd = new NpgsqlCommand("select exists (select true from student where studentnumber = '" + StudentNumberBox.Text + "')", conn);
                     string checknum = "False";
                     NpgsqlDataReader reader = cmd.ExecuteReader();
@@ -94,6 +96,7 @@ namespace AutomatedStudentRecordKeeper
                     {
                         MessageBox.Show("Student Already exists");
                     }
+                    //check formating in the tables
                     else if (checkcredit())
                     {
                         MessageBox.Show("Please check formating of rows of Course Credit Table");
@@ -104,7 +107,7 @@ namespace AutomatedStudentRecordKeeper
                     }
                     else
                     {
-
+                        //query to enter student data into database
                         cmd = new NpgsqlCommand("insert into student values(:name, :num, :prevsc, :prevprog, :yrlvl,:yrsec ,:entyear)", conn);
                         cmd.Parameters.Add(new NpgsqlParameter("name", Namebox.Text));
                         cmd.Parameters.Add(new NpgsqlParameter("num", StudentNumberBox.Text));
@@ -132,6 +135,7 @@ namespace AutomatedStudentRecordKeeper
                             }
                             else
                             {
+                                //query to enter makeup courses
                                 cmd = new NpgsqlCommand("insert into courses values(:sub, :num,'makeup',:name,:cred,NULL,NULL,:year,'makeup')", conn);
                                 cmd.Parameters.Add(new NpgsqlParameter("sub", MakeupCourseTable.GetControlFromPosition(0, j).Text));
                                 cmd.Parameters.Add(new NpgsqlParameter("num", MakeupCourseTable.GetControlFromPosition(1, j).Text));
@@ -159,6 +163,7 @@ namespace AutomatedStudentRecordKeeper
                             }
                             else
                             {
+                                //query to enter course credits
                                 cmd = new NpgsqlCommand("insert into grades values(:stnum, :sub, :num,'credit', NULL, :yr)", conn);
                                 cmd.Parameters.Add(new NpgsqlParameter("stnum", StudentNumberBox.Text));
                                 cmd.Parameters.Add(new NpgsqlParameter("sub", CourseCredTable.GetControlFromPosition(0, j).Text));
@@ -187,7 +192,7 @@ namespace AutomatedStudentRecordKeeper
                 MessageBox.Show("Connection error to database");
             }
             }
-
+        //keypress to allow only letters
         private void Namebox_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
@@ -196,7 +201,7 @@ namespace AutomatedStudentRecordKeeper
                 e.Handled = true;
             }
         }
-
+        //keypress to only allow numbers
         private void StudentNumberBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
@@ -205,7 +210,7 @@ namespace AutomatedStudentRecordKeeper
                 e.Handled = true;
             }
         }
-
+        //keypress to only allow uppercase letters
         private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
@@ -218,6 +223,7 @@ namespace AutomatedStudentRecordKeeper
                 e.KeyChar = Char.ToUpper(ch);
             }
         }
+        //check for makeup table formating
         public bool checkmakeup()
         {
             bool check = false;
@@ -238,6 +244,7 @@ namespace AutomatedStudentRecordKeeper
             }
             return check;
         }
+        //check for course credit table formating
         public bool checkcredit()
         {
             bool check = false;

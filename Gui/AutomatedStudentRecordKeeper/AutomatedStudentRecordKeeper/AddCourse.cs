@@ -20,6 +20,7 @@ namespace AutomatedStudentRecordKeeper
 {
     public partial class AddCourse : Form
     {
+        //Variable Declaration
         string selectedInputFile;
         NpgsqlCommand cmd = new NpgsqlCommand();
         string courseSection = string.Empty;
@@ -30,6 +31,7 @@ namespace AutomatedStudentRecordKeeper
         public AddCourse()
         {
             InitializeComponent();
+            //Populate dropdownbox with years
             int tempyear = DateTime.Now.Year;
             for (int i = 6; i >= -1; i--)
             {
@@ -41,11 +43,13 @@ namespace AutomatedStudentRecordKeeper
         private void button1_Click(object sender, EventArgs e)
         {
             AddCourseTable.Hide();
+            //connection string
             NpgsqlConnection conn = new NpgsqlConnection("Server=Localhost; Port=5432; Database=studentrecordkeeper; User Id=postgres; Password=;");
             //connect to database
             conn.Open();
             if (conn.State == System.Data.ConnectionState.Open)
             {
+                //checks for valid information
                 if (Yearleveldropbox.SelectedIndex == -1)
                 {
                     MessageBox.Show("Please select a Year level");
@@ -80,6 +84,7 @@ namespace AutomatedStudentRecordKeeper
                             NpgsqlDataReader reader;
                             NpgsqlCommand cmd;
                             string checkifexists = "False";
+                            //checks if data already exists
                             cmd = new NpgsqlCommand("select exists(select true from courses where coursesubject = :sub and coursenumber = :num and yearsection = :year)", conn);
                             cmd.Parameters.Add(new NpgsqlParameter("sub", AddCourseTable.GetControlFromPosition(0, j).Text));
                             cmd.Parameters.Add(new NpgsqlParameter("num", AddCourseTable.GetControlFromPosition(1, j).Text));
@@ -93,6 +98,7 @@ namespace AutomatedStudentRecordKeeper
                             reader.Close();
                             if (checkifexists == "False")
                             {
+                                //query for course entry into database
                                 cmd = new NpgsqlCommand("insert into courses values(:sub, :num, :sec, :name, :cred, :yrlvl, :yrsec, :entyear, 'curric')", conn);
                                 cmd.Parameters.Add(new NpgsqlParameter("sub", AddCourseTable.GetControlFromPosition(0, j).Text));
                                 cmd.Parameters.Add(new NpgsqlParameter("num", AddCourseTable.GetControlFromPosition(1, j).Text));
@@ -111,6 +117,7 @@ namespace AutomatedStudentRecordKeeper
 
                                 }
                             }
+                            //clear table after complete query
                             AddCourseTable.GetControlFromPosition(0, j).Text = "";
                             AddCourseTable.GetControlFromPosition(1, j).Text = "";
                             AddCourseTable.GetControlFromPosition(2, j).Text = "";
@@ -119,6 +126,7 @@ namespace AutomatedStudentRecordKeeper
                         }
                     }
                     conn.Close();
+                    //Show message after complete
                     MessageBox.Show(count.ToString() + " rows added to table, check formating if form not cleared");
                 }
             }
@@ -128,7 +136,7 @@ namespace AutomatedStudentRecordKeeper
             }
             AddCourseTable.Show();
         }
-
+        //key press to only allow uppercase letters
         private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
@@ -141,7 +149,7 @@ namespace AutomatedStudentRecordKeeper
                 e.KeyChar = Char.ToUpper(ch);
             }
         }
-
+        //key press to only allow numbers
         private void richTextBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;

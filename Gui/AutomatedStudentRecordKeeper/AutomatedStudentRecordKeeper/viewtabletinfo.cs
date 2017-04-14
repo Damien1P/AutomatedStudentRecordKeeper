@@ -8,6 +8,7 @@ namespace AutomatedStudentRecordKeeper
 {
     class viewtabletinfo
     {
+        //class to provide formating to view courses table
         private string subject;
         private string number;
         private string title;
