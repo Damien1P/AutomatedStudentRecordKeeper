@@ -132,7 +132,7 @@ namespace AutomatedStudentRecordKeeper
                             }
                             else
                             {
-                                cmd = new NpgsqlCommand("insert into courses values(:sub, :num, NULL,:name,:cred,NULL,NULL,:year,'makeup')", conn);
+                                cmd = new NpgsqlCommand("insert into courses values(:sub, :num,'makeup',:name,:cred,NULL,NULL,:year,'makeup')", conn);
                                 cmd.Parameters.Add(new NpgsqlParameter("sub", MakeupCourseTable.GetControlFromPosition(0, j).Text));
                                 cmd.Parameters.Add(new NpgsqlParameter("num", MakeupCourseTable.GetControlFromPosition(1, j).Text));
                                 cmd.Parameters.Add(new NpgsqlParameter("name", MakeupCourseTable.GetControlFromPosition(2, j).Text));
@@ -159,7 +159,7 @@ namespace AutomatedStudentRecordKeeper
                             }
                             else
                             {
-                                cmd = new NpgsqlCommand("insert into grades values(:stnum, :sub, :num, NULL, :yr)", conn);
+                                cmd = new NpgsqlCommand("insert into grades values(:stnum, :sub, :num,'credit', NULL, :yr)", conn);
                                 cmd.Parameters.Add(new NpgsqlParameter("stnum", StudentNumberBox.Text));
                                 cmd.Parameters.Add(new NpgsqlParameter("sub", CourseCredTable.GetControlFromPosition(0, j).Text));
                                 cmd.Parameters.Add(new NpgsqlParameter("num", CourseCredTable.GetControlFromPosition(1, j).Text));
