@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
+using NpgsqlTypes;
 
 namespace AutomatedStudentRecordKeeper
 {
@@ -15,8 +17,30 @@ namespace AutomatedStudentRecordKeeper
         public MainScreen()
         {
             InitializeComponent();
-        }
+            NpgsqlConnection conn = new NpgsqlConnection("Server=Localhost; Port=5432; Database=studentrecordkeeper; User Id=postgres; Password=;");
+            //connect to database
+            conn.Open();
+            if (conn.State == System.Data.ConnectionState.Open)
+            {
+                NpgsqlCommand cmd;
+                //querys to remove old data from database
+                cmd = new NpgsqlCommand("delete from student where year <= " +(DateTime.Now.Year - 7).ToString(), conn);
+                cmd.ExecuteNonQuery();
+                cmd.Cancel();
+                cmd = new NpgsqlCommand("delete from courses where yearused <= " + (DateTime.Now.Year - 7).ToString(), conn);
+                cmd.ExecuteNonQuery();
+                cmd.Cancel();
+                conn.Close();
 
+            }
+            else
+            {
+                MessageBox.Show("Connection error to database");
+            }
+
+        
+    }
+        //All click events for each button to access the other windows of the GUI
              private void addstudentbutton_Click(object sender, EventArgs e)
         {
             AddStudent add_student = new AddStudent();

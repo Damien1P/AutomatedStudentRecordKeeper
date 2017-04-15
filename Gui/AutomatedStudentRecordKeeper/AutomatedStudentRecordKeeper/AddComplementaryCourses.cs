@@ -24,6 +24,7 @@ namespace AutomatedStudentRecordKeeper
         public AddComplementaryCourses()
         {
             InitializeComponent();
+            //Adds years to dropdown box
             int tempyear = DateTime.Now.Year;
             for (int i = 6; i >= -1; i--)
             {
@@ -35,12 +36,13 @@ namespace AutomatedStudentRecordKeeper
         {
             CourseTable.Hide();
             int count = 0;
+            //connections string
             NpgsqlConnection conn = new NpgsqlConnection("Server=Localhost; Port=5432; Database=studentrecordkeeper; User Id=postgres; Password=;");
             //connect to database
             conn.Open();
             if (conn.State == System.Data.ConnectionState.Open)
             {
-
+                //Checks for Valid Data
                 if (yeardropbox.SelectedIndex == -1)
                 {
                     MessageBox.Show("Please select a Year");
@@ -69,6 +71,7 @@ namespace AutomatedStudentRecordKeeper
                             NpgsqlDataReader reader;
                             NpgsqlCommand cmd;
                             string checkifexists = "False";
+                            //query to check if course already exists
                             cmd = new NpgsqlCommand("select exists(select true from courses where coursesubject =  :sub and coursenumber = :num and yearsection = :year)", conn);
                             cmd.Parameters.Add(new NpgsqlParameter("sub", CourseTable.GetControlFromPosition(0, j).Text));
                             cmd.Parameters.Add(new NpgsqlParameter("num", CourseTable.GetControlFromPosition(1, j).Text));
@@ -83,6 +86,7 @@ namespace AutomatedStudentRecordKeeper
                             if (checkifexists == "False")
                             {
                                 string checktype = "";
+                                //detrmine what list to add to
                                 if (listbox.Text == "A")
                                 {
                                     checktype = "compa";
@@ -91,7 +95,8 @@ namespace AutomatedStudentRecordKeeper
                                 {
                                     checktype = "compb";
                                 }
-                                cmd = new NpgsqlCommand("insert into courses values(:sub, :num, NULL ,:name, :cred, NULL,:yearsec,:entyear,:type)", conn);
+                                //query to add complementary course to database
+                                cmd = new NpgsqlCommand("insert into courses values(:sub, :num, 'complementary' ,:name, :cred, NULL,:yearsec,:entyear,:type)", conn);
                                 cmd.Parameters.Add(new NpgsqlParameter("sub", CourseTable.GetControlFromPosition(0, j).Text));
                                 cmd.Parameters.Add(new NpgsqlParameter("num", CourseTable.GetControlFromPosition(1, j).Text));
                                 cmd.Parameters.Add(new NpgsqlParameter("name", CourseTable.GetControlFromPosition(2, j).Text));
@@ -108,6 +113,7 @@ namespace AutomatedStudentRecordKeeper
 
                                 }
                             }
+                            //clear table after entered
                             CourseTable.GetControlFromPosition(0, j).Text = "";
                             CourseTable.GetControlFromPosition(1, j).Text = "";
                             CourseTable.GetControlFromPosition(2, j).Text = "";
@@ -116,6 +122,7 @@ namespace AutomatedStudentRecordKeeper
                         }
                     }
                     conn.Close();
+                    //message displaying successful queries
                     MessageBox.Show(count.ToString() + " rows added to table, check formating if any field not cleared");
                 }
             }
@@ -125,7 +132,7 @@ namespace AutomatedStudentRecordKeeper
             }
             CourseTable.Show();
         }
-
+        //key press event to only allow numbers
         private void richTextBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
@@ -135,7 +142,7 @@ namespace AutomatedStudentRecordKeeper
             }
         }
 
-
+        //key press event to only allow upper case letters
         private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;

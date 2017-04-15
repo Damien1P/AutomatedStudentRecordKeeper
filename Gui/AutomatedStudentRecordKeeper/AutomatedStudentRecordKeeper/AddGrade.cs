@@ -22,6 +22,7 @@ namespace AutomatedStudentRecordKeeper
         public AddGrade()
         {
             InitializeComponent();
+            //populate dropdownbox with years
             int tempyear = DateTime.Now.Year;
             for (int i = 6; i >= 0; i--)
             {
@@ -32,11 +33,13 @@ namespace AutomatedStudentRecordKeeper
         private void button1_Click(object sender, EventArgs e)
         {
             CourseTable.Hide();
+            //database connection string
             NpgsqlConnection conn = new NpgsqlConnection("Server=Localhost; Port=5432; Database=studentrecordkeeper; User Id=postgres; Password=;");
             //connect to database
             conn.Open();
             if (conn.State == System.Data.ConnectionState.Open)
             {
+                //checks for valid info
                 if (StudentNumber.Text.Length != 7)
                 {
                     MessageBox.Show("Please enter valid student number");
@@ -47,6 +50,7 @@ namespace AutomatedStudentRecordKeeper
                 }
                 else
                 {
+                    //check if student exists in database
                     NpgsqlCommand cmd = new NpgsqlCommand("select exists (select true from student where studentnumber = '" + StudentNumber.Text + "')", conn);
                     string checknum = "False";
                     NpgsqlDataReader reader = cmd.ExecuteReader();
@@ -78,7 +82,7 @@ namespace AutomatedStudentRecordKeeper
                             }
                             else
                             {
-
+                                //query form grade enrty into database
                                 cmd = new NpgsqlCommand("insert into grades values(:stnum, :sub, :num,'Manual',:grade, :yr)", conn);
                                 cmd.Parameters.Add(new NpgsqlParameter("stnum",StudentNumber.Text));
                                 cmd.Parameters.Add(new NpgsqlParameter("sub", CourseTable.GetControlFromPosition(0, j).Text));
@@ -93,6 +97,7 @@ namespace AutomatedStudentRecordKeeper
                                 {
 
                                 }
+                                //clear table after complete
                                 CourseTable.GetControlFromPosition(0, j).Text = "";
                                 CourseTable.GetControlFromPosition(1, j).Text = "";
                                 CourseTable.GetControlFromPosition(2, j).Text = "";
@@ -100,6 +105,7 @@ namespace AutomatedStudentRecordKeeper
                             }
                         }
                         conn.Close();
+                        //message showing successful queries
                         MessageBox.Show(count.ToString() + " rows added, if not cleared check formating");
                     }
                 }
