@@ -37,5 +37,5 @@ CREATE TABLE grades
 	coursesection text,
 	grade integer,
 	yeartaken integer,
-	PRIMARY KEY(studentnumber,coursenumber,coursesubject, coursesection,yeartaken)
+	PRIMARY KEY(studentnumber,coursenumber,coursesubject, coursesection, yeartaken)
 );
